@@ -1,37 +1,151 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; max-width: 100%; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif; line-height: 1.6; }
-    img { max-width: 100%; height: auto; display: block; }
-    .container { width: 1920px; margin: 0 auto; padding: 16px; }
-    nav a { margin-right: 12px; text-decoration: none; }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
-    .col-12 { grid-column: span 12; }
-    @media (min-width: 768px) { .col-md-6 { grid-column: span 6; } }
-    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Builder｜EvanH作品集</title>
+    <meta name="description" content="Evan Huang的個人作品集網站。用以展示從 0 到 1 的產品建置與設計歷程分享，另介紹背景，並提供 LinkedIn 與外部作品集連結。">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="container" role="banner">
-    <nav aria-label="主選單">
-      <a href="#about">關於我</a>
-      <a href="#projects">作品集</a>
-      <a href="https://example.com/blog">技術部落格</a>
-      <a href="mailto:me@example.com">聯絡我</a>
-    </nav>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <h1>你好，我是小明：前端工程師新手之路</h1>
-    <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得。</p>
-  </header>
 
-  <footer class="container" role="contentinfo">
-    <p>© 2025 My Portfolio · <a href="#">GitHub</a></p>
-    <img src="https://source.unsplash.com/600x200/?technology,abstract" alt="">
-  </footer>
+    <!-- site header -->
+    <header class="site-header">
+        <nav class="nav container">
+            <div class="logo">EvanH -AI builder</div>
+
+            <div class="hamburger" id="hamburgerBtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a class="nav-link nav-btn active" href="#hero">首頁</a></li>
+                <li><a class="nav-link nav-btn" href="#project">作品</a></li>
+                <li><a class="nav-link nav-btn" href="#blog">文章</a></li>
+                <li><a class="nav-link nav-btn" href="#about">關於</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PAGE: HERO-START / SECTION:HERO-START -->
+        <section id="hero" class="section section-hero active-section">
+            <div class="container hero-content">
+                <span class="tagline">// PRODUCT DESIGNER & BUILDER</span>
+                <h1>我把混亂的想法化為可上線的產品。</h1>
+                <p class="bio">我是 Evan，一位熱衷於從 0 到 1 打造產品的設計師和創作者。這裡會放我的作品、AI實驗過程與心得。</p>
+                <button class="cta-btn" data-target="project">查看作品</button>
+            </div>
+        </section>
+        <!-- PAGE: HERO-END / SECTION:HERO-END -->
+
+        <!-- PAGE: PROJECT-START / SECTION:PROJECT-START -->
+        <section id="project" class="section section-project">
+            <div class="container section-header">
+                <h2>作品集</h2>
+                <p class="subtitle">從設計到部署的實作範例</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&q=80" alt="在筆電前撰寫程式碼的開發者" loading="lazy">
+                    <span class="project-num">01.</span>
+                    <h3 class="project-title">FinTech 儀表板</h3>
+                    <p class="project-desc">即時加密資產追蹤平台，從 UI 到後端部署完整實作。</p>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80" alt="手機上展示任務管理介面" loading="lazy">
+                    <span class="project-num">02.</span>
+                    <h3 class="project-title">AI 任務管理器</h3>
+                    <p class="project-desc">使用 NLP 自動分類與排序任務的生產力應用。</p>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="顯示電商範例的網頁畫面" loading="lazy">
+                    <span class="project-num">03.</span>
+                    <h3 class="project-title">電商骨架</h3>
+                    <p class="project-desc">Headless CMS 快速原型的範例專案。</p>
+                </div>
+            </div>
+
+            <div class="more-btn-wrap">
+                <a class="cta-btn" href="/portfolio.html">更多作品</a>
+            </div>
+        </section>
+        <!-- PAGE: PROJECT-END / SECTION:PROJECT-END -->
+
+        <!-- PAGE: BLOG-START / SECTION:BLOG-START -->
+        <section id="blog" class="section section-blog">
+            <div class="container section-header">
+                <h2>文章</h2>
+                <p class="subtitle">工程、設計與策略的思考</p>
+            </div>
+
+            <div class="blog-list">
+                <article class="blog-item">
+                    <span class="blog-date">OCT 24, 2023</span>
+                    <h3 class="blog-title">為何我從資料庫結構開始</h3>
+                    <p class="excerpt">在動手設計之前，理解資料關係能決定產品能力的上限...</p>
+                    <a class="read-more" href="/blog/article-1.html">繼續閱讀 →</a>
+                </article>
+
+                <article class="blog-item">
+                    <span class="blog-date">SEP 12, 2023</span>
+                    <h3 class="blog-title">MVP 的藝術</h3>
+                    <p class="excerpt">如何在保有價值的前提下裁剪功能。以近期專案為例...</p>
+                    <a class="read-more" href="/blog/article-2.html">繼續閱讀 →</a>
+                </article>
+
+                <article class="blog-item">
+                    <span class="blog-date">AUG 05, 2023</span>
+                    <h3 class="blog-title">單人開發者的設計系統</h3>
+                    <p class="excerpt">你不需要一個大團隊也能維持一致性。這是我的做法...</p>
+                    <a class="read-more" href="/blog/article-3.html">繼續閱讀 →</a>
+                </article>
+            </div>
+
+            <div class="more-btn-wrap">
+                <a class="cta-btn" href="/blog.html">更多文章</a>
+            </div>
+        </section>
+        <!-- PAGE: BLOG-END / SECTION:BLOG-END -->
+
+        <!-- PAGE: ABOUT-START / SECTION:ABOUT-START -->
+        <section id="about" class="section section-about">
+            <div class="container section-header">
+                <h2>關於我</h2>
+            </div>
+            <div class="about-grid about-grid--two-col">
+                <div class="about-figure">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80" alt="在辦公桌前的肖像照" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <h3>我是 Evan</h3>
+                    <p>我是產品設計師與 AI Builder，專注於從概念到上線的整體流程，擅長將抽象需求拆解成可驗證的產品假設，並快速打造 MVP 供使用者測試與迭代。</p>
+                    <p>我的工作內容包含：使用者研究、資訊架構、界面與互動設計、前端原型開發，以及將簡潔的 AI 功能整合進產品流程中。習慣在小團隊中擔任跨域角色，負責從策略、設計到技術落地的串接。</p>
+                    <p>近年重點成果有：建立可重複使用的設計系統、部署數個小型服務化產品，以及在產品中導入自動化資料標記與文字分析流程，提升開發與決策效率。</p>
+                    <p>核心技能：產品設計、原型開發、前端 (HTML/CSS/JS)、AI 應用整合、快速部署與實驗設計。</p>
+                    <p><a class="cta-btn" href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">透過 LinkedIn 聯絡我</a></p>
+                </div>
+            </div>
+        </section>
+         <!-- PAGE: ABOUT-END / SECTION:ABOUT-END -->
+
+    </main>
+
+    <footer class="section section-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2025 EvanH -AI builder</p>
+            <div class="socials">
+                <a class="nav-link" href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="nav-link" href="https://your-portfolio.example.com" target="_blank" rel="noopener">外部作品集</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
